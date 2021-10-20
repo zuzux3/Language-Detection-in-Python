@@ -9,3 +9,8 @@ simplefilter('ignore')
 
 data = read_csv("X:\projects\Language Detection in Python\Language Detection.csv")
 data.head(10)
+data["Language"].value_counts()
+
+x = data["Text"]
+y = data["Language"]
+
