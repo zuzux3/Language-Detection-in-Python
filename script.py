@@ -7,5 +7,5 @@ from warnings import *
 
 simplefilter('ignore')
 
-data = read_csv("Language Detection.csv")
+data = read_csv("X:\projects\Language Detection in Python\Language Detection.csv")
 data.head(10)
