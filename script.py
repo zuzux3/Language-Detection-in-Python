@@ -43,3 +43,13 @@ ac = accuracy_score(y_test, y_pred)
 cm = confusion_matrix(y_test, y_pred)
 
 print("Accuracy is: ", ac)
+
+figure(figsize=(15, 10))
+heatmap(cm, annot = True)
+##show()
+
+def prediction(text):
+    x = cv.transform([text]).toarray()
+    lang = model.predict(x)
+    lang = le.inverse_transform(lang)
+    print("The language is in: ", lang[0])
