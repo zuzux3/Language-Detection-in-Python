@@ -8,11 +8,11 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 simplefilter('ignore')
 
-data = read_csv("X:\projects\Language Detection in Python\Language Detection.csv")
+data = read_csv("Language Detection.csv")
 data["Language"].value_counts()
 
 X = data["Text"]
@@ -46,7 +46,7 @@ print("Accuracy is: ", ac)
 
 figure(figsize=(15, 10))
 heatmap(cm, annot = True)
-##show()
+show()
 
 def prediction(text):
     x = cv.transform([text]).toarray()
